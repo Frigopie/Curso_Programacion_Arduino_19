@@ -36,7 +36,7 @@ Servo miservo;
 SimpleDHT11 dht11(PIN_DHT11);
 
 //Objeto pantalla
-LiquidCrystal_I2C lcd(0x27, 16, 2); // set the LCD address to 0x27 for a 16 chars and 2 line display
+LiquidCrystal_I2C lcd(0x3F, 16, 2); // set the LCD address to 0x27 for a 16 chars and 2 line display
 
 void setup() {
   //Inicializo puerto serie
@@ -152,7 +152,7 @@ int recogeRespuesta() {
 void muestraTexto() {
   Serial.println(F("Muestra Texto en Pantalla LCD 16x2."));
   lcd.setCursor(0, 0);
-  lcd.print("Prueba de Pantalla");
+  lcd.print("Pues ya funciona");
   lcd.setCursor(0, 1);
   lcd.print("Completada...");
   Serial.println(F("Pulsar 'q' para salir."));
